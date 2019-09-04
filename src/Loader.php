@@ -63,7 +63,7 @@ class Loader
         if (!file_exists(rtrim($path, DIRECTORY_SEPARATOR) . DIRECTORY_SEPARATOR . $file)) {
             return false;
         }
-        $dotEnv = new DotEnv($path, $file);
+        $dotEnv = DotEnv::create($path, $file);
         /*
          * Overload or load method by environment variable COMPOSER_DOTENV_OVERLOAD.
          */
